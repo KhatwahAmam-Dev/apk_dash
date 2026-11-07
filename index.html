@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karya Nyata Dashboard - CS77</title>
+    <script src="js/script.js" defer></script>
+    <link rel="css/stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Tombol Apresiasi Kopi -->
+    <header class="dashboard-header">
+        <div class="logo-area">
+            <h1>CS77 <span>Workspace</span></h1>
+        </div>
+        <!-- Tombol Buy Me a Coffee diletakkan elegan di sudut atas -->
+        <a href="https://buymeacoffee.com" target="_blank" class="coffee-btn">
+            ☕ <span>Buy me a coffee</span>
+        </a>
+    </header>
+
+    <!-- Area Utama Galeri Foto Bingkai -->
+    <main class="portfolio-container">
+        <!-- Kartu Karya 1 (Sedikit miring ke kiri) -->
+        <div class="app-card frame-left" onclick="bukaDetail('kasir')">
+            <div class="photo-frame">
+                <img src="thumbnail-kasir.png" alt="Aplikasi Kasir">
+                <div class="frame-label">Aplikasi Kasir Offline</div>
+            </div>
+        </div>
+
+        <!-- Kartu Karya 2 (Sedikit miring ke kanan) -->
+        <div class="app-card frame-right" onclick="bukaDetail('ptw')">
+            <div class="photo-frame">
+                <img src="thumbnail-ptw.png" alt="Permit to Work">
+                <div class="frame-label">Sistem Permit to Work (PTW)</div>
+            </div>
+        </div>
+
+        <!-- Kartu Karya 3 (Lurus/Sedikit naik) -->
+        <div class="app-card frame-straight" onclick="bukaDetail('returned')">
+            <div class="photo-frame">
+                <img src="thumbnail-returned.png" alt="Data Entry Barang Kembali">
+                <div class="frame-label">Logistik QR Scanner</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pop-up Detail Informasi (Modal) -->
+    <div id="detailModal" class="modal-overlay" onclick="tutupDetail()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="tutupDetail()">&times;</button>
+            <h2 id="modalTitle">Nama Aplikasi</h2>
+            <div class="modal-body">
+                <p id="modalDesc">Deskripsi penggunaan akan dimuat di sini.</p>
+                <div class="tech-stack" id="modalStack"></div>
+                <a href="#" id="modalLink" target="_blank" class="visit-btn">Buka Aplikasi 🚀</a>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
